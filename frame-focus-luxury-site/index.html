@@ -217,8 +217,8 @@
 
         <div class="services-note">
           <p>
-            Edit, remove, or duplicate these service cards as your exact package list changes. The
-            layout will automatically expand while keeping the same premium look.
+            Need a custom package for a luxury listing, brokerage team, builder, or multi-property
+            project? Send the details and I will build a quote around the way you plan to market it.
           </p>
           <a class="button primary" href="#contact">Ask for a Custom Quote</a>
         </div>
@@ -284,14 +284,25 @@
             </div>
           </div>
 
-          <form class="booking-form" action="mailto:Frameandfocus417@gmail.com" method="post" enctype="text/plain">
+          <form
+            class="booking-form"
+            name="booking-request"
+            method="POST"
+            action="/success.html"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="booking-request" />
+            <p class="hidden-field">
+              <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+            </p>
             <label>
               Name
-              <input name="name" type="text" autocomplete="name" />
+              <input name="name" type="text" autocomplete="name" required />
             </label>
             <label>
               Email
-              <input name="email" type="email" autocomplete="email" />
+              <input name="email" type="email" autocomplete="email" required />
             </label>
             <label>
               Property address
