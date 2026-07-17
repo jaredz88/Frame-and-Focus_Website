@@ -1,7 +1,7 @@
 document.documentElement.classList.add("js");
 
 const revealTargets = document.querySelectorAll(
-  ".hero-content, .proof-strip > div, .intro-section, .cinematic-image, .cinematic-copy, .section-heading, .gallery-item, .service-card, .services-note, .standard-grid article, .process-list > div, .about-image, .about-copy, .contact-panel"
+  ".hero-content, .proof-strip > div, .intro-section, .cinematic-image, .cinematic-copy, .section-heading, .gallery-item, .service-card, .services-note, .credentials-badge, .credentials-copy, .credentials-grid article, .standard-grid article, .process-list > div, .about-image, .about-copy, .contact-panel"
 );
 
 const revealObserver = new IntersectionObserver(

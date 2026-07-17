@@ -319,6 +319,7 @@ h3 {
 .portfolio-section,
 .standard-section,
 .audience-section,
+.credentials-section,
 .process-section,
 .about-section,
 .contact-section {
@@ -660,6 +661,72 @@ h3 {
   color: rgba(255, 255, 255, 0.68);
 }
 
+.credentials-section {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(360px, 0.72fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: center;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(219, 192, 143, 0.12), transparent 28%),
+    linear-gradient(135deg, #171511, var(--deep));
+}
+
+.credentials-badge {
+  width: min(100%, 390px);
+  padding: 0;
+  filter: drop-shadow(0 22px 46px rgba(0, 0, 0, 0.34));
+}
+
+.credentials-badge img {
+  height: auto;
+  object-fit: contain;
+}
+
+.credentials-copy h2 {
+  max-width: 840px;
+  margin-bottom: 22px;
+}
+
+.credentials-copy p:not(.eyebrow) {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+}
+
+.credentials-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(219, 192, 143, 0.26);
+  border-left: 1px solid rgba(219, 192, 143, 0.26);
+}
+
+.credentials-grid article {
+  min-height: 150px;
+  padding: clamp(22px, 3vw, 34px);
+  border-right: 1px solid rgba(219, 192, 143, 0.26);
+  border-bottom: 1px solid rgba(219, 192, 143, 0.26);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.credentials-grid strong,
+.credentials-grid span {
+  display: block;
+}
+
+.credentials-grid strong {
+  margin-bottom: 10px;
+  color: var(--gold-light);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.credentials-grid span {
+  color: rgba(255, 255, 255, 0.66);
+}
+
 .standard-section {
   background:
     linear-gradient(rgba(247, 243, 234, 0.92), rgba(247, 243, 234, 0.96)),
@@ -781,6 +848,11 @@ h3 {
   margin-top: 28px;
   color: var(--gold-light);
   font-weight: 800;
+}
+
+.contact-booking {
+  width: fit-content;
+  margin-top: 10px;
 }
 
 .booking-form {
@@ -989,6 +1061,8 @@ h3 {
   .cinematic-break,
   .standard-grid,
   .audience-grid,
+  .credentials-section,
+  .credentials-grid,
   .about-section,
   .contact-panel,
   .split-heading {
@@ -1113,6 +1187,8 @@ h3 {
   .intro-section,
   .portfolio-section,
   .cinematic-break,
+  .audience-section,
+  .credentials-section,
   .standard-section,
   .process-section,
   .about-section,
@@ -1154,6 +1230,24 @@ h3 {
   .audience-grid span {
     margin-bottom: 70px;
     font-size: 34px;
+  }
+
+  .credentials-badge {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .credentials-copy p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .credentials-grid article {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .credentials-grid strong {
+    font-size: 26px;
   }
 
   .proof-strip div {
@@ -1219,6 +1313,10 @@ h3 {
 
   .contact-panel {
     padding: 22px;
+  }
+
+  .contact-booking {
+    width: 100%;
   }
 
   .booking-form input,
